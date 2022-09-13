@@ -1,0 +1,28 @@
+.profileContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 150px;
+  padding: 5px;
+}
+.websiteHeaderLogo {
+  width: 100px;
+}
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 10px;
+}
+.profile {
+  width: 20px;
+}
+
+.logoutBtn {
+  border-color: #3b82f6;
+  color: #3b82f6;
+  background-color: transparent;
+  border-radius: 3px;
+  outline: none;
+}
