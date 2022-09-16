@@ -17,6 +17,7 @@
 }
 .profile {
   width: 20px;
+  cursor: pointer;
 }
 
 .logoutBtn {
@@ -25,4 +26,5 @@
   background-color: transparent;
   border-radius: 3px;
   outline: none;
+  cursor: pointer;
 }

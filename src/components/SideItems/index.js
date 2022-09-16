@@ -19,7 +19,6 @@ const SideItems = () => (
   <NxtWatchContext.Consumer>
     {value => {
       const {isDark, activeTab, changeTab} = value
-      console.log(activeTab)
 
       const clickOptionHome = () => {
         changeTab('Home')
@@ -37,87 +36,94 @@ const SideItems = () => (
         changeTab('SavedVideos')
       }
 
-      const bgColor = isDark ? '#ffffff80' : '#000000'
+      const bgColor = isDark ? '#ffffff80' : '#181818'
       const textColor = isDark ? '#f9f9f9' : '#181818'
       const selectedItemColor = !isDark ? '#00306e' : '#ffffff'
 
       return (
         <SideOptionsVideosContainer isDark={isDark}>
           <SideOptions>
-            <LinkItem
-              to="/"
-              onClick={clickOptionHome}
-              isActiveColor={bgColor}
-              color={activeTab === 'Home' ? '#ff0000' : {bgColor}}
-            >
-              <IoMdHome />
-              <LinkPara
-                isDark={isDark}
-                color={activeTab === 'Home' ? {selectedItemColor} : {textColor}}
-                isActiveParaColor={textColor}
+            <li>
+              <LinkItem
+                to="/"
+                onClick={clickOptionHome}
+                isActive={bgColor}
+                color={activeTab === 'Home' ? '#ff0000' : {bgColor}}
               >
-                Home
-              </LinkPara>
-            </LinkItem>
-
-            <LinkItem
-              to="/trending"
-              onClick={clickOptionTrending}
-              isActiveColor={bgColor}
-              color={activeTab === 'Trending'}
-            >
-              <HiFire />
-              <LinkPara
-                isDark={isDark}
-                color={
-                  activeTab === 'Trending' ? {selectedItemColor} : {textColor}
-                }
-                isActiveParaColor={textColor}
+                <IoMdHome />
+                <LinkPara
+                  isDark={isDark}
+                  color={
+                    activeTab === 'Home' ? {selectedItemColor} : {textColor}
+                  }
+                  isActiveParaColor={textColor}
+                >
+                  Home
+                </LinkPara>
+              </LinkItem>
+            </li>
+            <li>
+              <LinkItem
+                to="/trending"
+                onClick={clickOptionTrending}
+                isActive={bgColor}
+                color={activeTab === 'Trending' ? '#ff0000' : {bgColor}}
               >
-                Trending
-              </LinkPara>
-            </LinkItem>
-
-            <LinkItem
-              to="/gaming"
-              onClick={clickOptionGaming}
-              isActiveColor={bgColor}
-              color={activeTab === 'Gaming'}
-            >
-              <FaGamepad />
-              <LinkPara
-                isDark={isDark}
-                color={
-                  activeTab === 'Gaming' ? {selectedItemColor} : {textColor}
-                }
-                isActiveParaColor={textColor}
+                <HiFire />
+                <LinkPara
+                  isDark={isDark}
+                  color={
+                    activeTab === 'Trending' ? {selectedItemColor} : {textColor}
+                  }
+                  isActiveParaColor={textColor}
+                >
+                  Trending
+                </LinkPara>
+              </LinkItem>
+            </li>
+            <li>
+              <LinkItem
+                to="/gaming"
+                onClick={clickOptionGaming}
+                isActive={bgColor}
+                color={activeTab === 'Gaming' ? '#ff0000' : {bgColor}}
               >
-                Gaming
-              </LinkPara>
-            </LinkItem>
-
-            <LinkItem
-              to="/saved-videos"
-              onClick={clickOptionSavedVideos}
-              isActiveColor={bgColor}
-              color={activeTab === 'SavedVideos'}
-            >
-              <MdPlaylistAdd />
-              <LinkPara
-                isDark={isDark}
-                color={
-                  activeTab === 'SavedVideos'
-                    ? {selectedItemColor}
-                    : {textColor}
-                }
-                isActiveParaColor={textColor}
+                <FaGamepad />
+                <LinkPara
+                  isDark={isDark}
+                  color={
+                    activeTab === 'Gaming' ? {selectedItemColor} : {textColor}
+                  }
+                  isActiveParaColor={textColor}
+                >
+                  Gaming
+                </LinkPara>
+              </LinkItem>
+            </li>
+            <li>
+              <LinkItem
+                to="/saved-videos"
+                onClick={clickOptionSavedVideos}
+                isActive={bgColor}
+                color={activeTab === 'SavedVideos' ? '#ff0000' : {bgColor}}
               >
-                Saved Videos
-              </LinkPara>
-            </LinkItem>
+                <MdPlaylistAdd />
+                <LinkPara
+                  isDark={isDark}
+                  color={
+                    activeTab === 'SavedVideos'
+                      ? {selectedItemColor}
+                      : {textColor}
+                  }
+                  isActiveParaColor={textColor}
+                >
+                  Saved Videos
+                </LinkPara>
+              </LinkItem>
+            </li>
           </SideOptions>
           <SocialMedia>
-            <ContactUs isDark={isDark}>Contact us</ContactUs>
+            <ContactUs isDark={isDark}>CONTACT US</ContactUs>
             <SocialMediaIcons>
               <ImageIcon
                 src="https://assets.ccbp.in/frontend/react-js/nxt-watch-facebook-logo-img.png"
@@ -133,7 +139,7 @@ const SideItems = () => (
               />
             </SocialMediaIcons>
             <ThankingNote isDark={isDark}>
-              Enjoy! Now in see your channels and recommendations
+              Enjoy! Now to see your channels and recommendations!
             </ThankingNote>
           </SocialMedia>
         </SideOptionsVideosContainer>

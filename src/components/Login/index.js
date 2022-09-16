@@ -10,6 +10,7 @@ import {
   InputContainer,
   ShowPassword,
   Input,
+  LoginBtn,
 } from './styledComponents'
 import './index.css'
 
@@ -84,7 +85,7 @@ class Login extends Component {
               <FormContainer isDark={isDark}>
                 <form onSubmit={this.registrationUser}>
                   <div className="loginIconContainer">
-                    <WebsiteLogo src={LoginWebsiteLogo} />
+                    <WebsiteLogo src={LoginWebsiteLogo} alt="website logo" />
                   </div>
                   <Label htmlFor="username" isDark={isDark}>
                     USERNAME
@@ -127,9 +128,9 @@ class Login extends Component {
                     </Label>
                   </ShowPassword>
                   {errorShow && <p className="error-message">*{errorMsg}</p>}
-                  <button type="submit" className="loginBtn">
+                  <LoginBtn type="submit" color="#ffffff">
                     Login
-                  </button>
+                  </LoginBtn>
                 </form>
               </FormContainer>
             </LoginContainer>

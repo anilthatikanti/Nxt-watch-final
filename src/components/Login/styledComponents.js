@@ -58,3 +58,14 @@ export const ThemeBtn = styled.button`
   border: none;
   background-color: transparent;
 `
+export const LoginBtn = styled.button`
+  color: ${props => props.color};
+  background-color: #3b82f6;
+  border-radius: 3px;
+  outline: none;
+  width: 100%;
+  border: none;
+  font-size: 10px;
+  padding: 5px;
+  font-family: 'roboto';
+`
