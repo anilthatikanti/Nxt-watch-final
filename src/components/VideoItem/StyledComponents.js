@@ -4,11 +4,17 @@ import {Link} from 'react-router-dom'
 export const VideoCardContainer = styled.li`
   display: flex;
   flex-direction: column;
-  width: 300px;
+  max-width: 300px;
   list-style-type: none;
+  width: 100%;
   cursor: pointer;
   margin: 25px;
   background-color: ${props => props.bgColor};
+  @media screen and (max-width: 992px) {
+    max-width: 992px;
+    width: 100%;
+    margin: 0px;
+  }
 `
 
 export const ThumbnailImage = styled.img`
@@ -18,6 +24,8 @@ export const VideoCardBottomContainer = styled.div`
   display: flex;
   width: 100%;
   align-items: center;
+  margin: 5px;
+  flex-wrap: wrap;
 `
 
 export const ProfileImage = styled.img`
@@ -42,4 +50,7 @@ export const NavLink = styled(Link)`
   color: #1e293b;
   text-decoration: none;
   margin-bottom: 10px;
+  @media screen and (max-width: 992px) {
+    margin-top: 5px;
+  }
 `

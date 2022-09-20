@@ -8,6 +8,9 @@ export const SearchVideosContainer = styled.div`
   overflow-y: scroll;
   padding: 30px;
   height: 98vh;
+  @media screen and (max-width: 992px) {
+    padding: 10px;
+  }
 `
 
 export const SearchInput = styled.input`
@@ -23,12 +26,19 @@ export const Container = styled.div`
   display: flex;
   justify-content: space-between;
   height: 100%;
+  @media screen and (max-width: 992px) {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
 `
 
 export const VideosContainer = styled.ul`
   display: flex;
   flex-direction: column;
   list-style-type: none;
+  padding: 0px;
+  margin: 0px;
 `
 
 export const TrendingHeadContainer = styled.div`
@@ -38,6 +48,10 @@ export const TrendingHeadContainer = styled.div`
   margin-left: 50px;
   background-color: ${props => props.bgColor};
   width: 100%;
+  @media screen and (max-width: 992px) {
+    margin: 0px;
+    height: 40px;
+  }
 `
 
 export const TrendingLogo = styled.div`
@@ -50,12 +64,19 @@ export const TrendingLogo = styled.div`
   justify-content: center;
   align-items: center;
   margin: 10px;
+  @media screen and (max-width: 992px) {
+    height: 30px;
+    width: 30px;
+  }
 `
 
 export const TrendingHead = styled.h1`
   color: ${props => props.color};
   font-family: Roboto;
   font-weight: bold;
+  @media screen and (max-width: 992px) {
+    font-size: 20px;
+  }
 `
 
 export const ProductsLoaderContainer = styled.div`
@@ -76,12 +97,20 @@ export const HomeSideContainer = styled.div`
   overflow-y: scroll;
   width: 90%;
   background-color: ${props => props.bgColor};
+  @media screen and (max-width: 992px) {
+    width: 100%;
+  }
 `
 export const HomeContainer = styled.div`
   background-color: ${props => props.color};
   height: 98vh;
   padding: 20px;
   background-size: cover;
+  @media screen and (max-width: 992px) {
+    width: 100%;
+    height: 100vh;
+    padding: 10px;
+  }
 `
 
 export const NotFoundContainer = styled.div`

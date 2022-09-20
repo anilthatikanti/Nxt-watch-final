@@ -1,9 +1,9 @@
 import {Component} from 'react'
 import Cookies from 'js-cookie'
 import Loader from 'react-loader-spinner'
-import {AiFillFire} from 'react-icons/ai'
 import './index.css'
 import {
+  Fire,
   HomeContainer,
   Container,
   HomeSideContainer,
@@ -92,7 +92,7 @@ class Trending extends Component {
             <SearchVideosContainer data-testid="trending" bgColor={bgColor}>
               <TrendingHeadContainer color={textColor} bgColor={bgColor}>
                 <TrendingLogo>
-                  <AiFillFire className={IconColor} />
+                  <Fire className={IconColor} />
                 </TrendingLogo>
                 <TrendingHead color={textColor}>Trending</TrendingHead>
               </TrendingHeadContainer>

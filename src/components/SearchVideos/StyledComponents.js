@@ -11,8 +11,11 @@ export const SearchContainer = styled.div`
   border-width: 2px;
   width: 50%;
   border-color: #47556990;
-
   background-color: ${props => (props.isDark ? '#231f20' : '#f9f9f9')};
+  @media screen and (max-width: 992px) {
+    width: 70%;
+    border-width: 1px;
+  }
 `
 export const SearchBtn = styled.button`
   border-color: #47556940;
@@ -28,6 +31,9 @@ export const SearchBar = styled.input`
   padding: 6px;
   outline: none;
   color: ${props => (props.isDark ? '#f9f9f9' : '#231f20')};
+  @media screen and (max-width: 992px) {
+    padding: 0px 0px 0px 15px;
+  }
 `
 export const SearchIcon = styled(AiOutlineSearch)`
   font-size: 20px;
@@ -40,6 +46,10 @@ export const VideoContainer = styled.ul`
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
+  @media screen and (max-width: 992px) {
+    padding: 0px;
+    margin: 0px;
+  }
 `
 export const ProductsLoaderContainer = styled.div`
   display: flex;
@@ -54,6 +64,11 @@ export const SearchedVideoContainer = styled.div`
   overflow-y: scroll;
   padding: 30px;
   width: 100%;
+  @media screen and (max-width: 992px) {
+    height: 100%;
+    width: 100%;
+    padding: 0px;
+  }
 `
 export const SearchBox = styled.div`
   background-color: ${props => (props.isDark ? '#181818' : '#f9f9f9')};
@@ -61,6 +76,11 @@ export const SearchBox = styled.div`
   width: 80%;
   margin-left: 50px;
   margin-top: -30px;
+  @media screen and (max-width: 992px) {
+    margin: 5px 0px 0px 0px;
+    width: 100%;
+    padding: 0px;
+  }
 `
 export const NotFoundContainer = styled.div`
   display: flex;

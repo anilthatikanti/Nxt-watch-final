@@ -1,16 +1,33 @@
 import styled from 'styled-components'
 import {Link} from 'react-router-dom'
+import {AiFillFire} from 'react-icons/ai'
 
 export const HomeContainer = styled.div`
   background-color: ${props => (props.isDark ? '#181818 ' : '#f9f9f9')};
   height: 98vh;
   padding: 20px;
   background-size: cover;
+  @media screen and (max-width: 992px) {
+    width: 100%;
+    height: 100vh;
+    padding: 10px;
+  }
+`
+export const Fire = styled(AiFillFire)`
+  font-size: 25px;
+  @media screen and (max-width: 992px) {
+    font-size: 15px;
+  }
 `
 export const Container = styled.div`
   display: flex;
   justify-content: space-between;
   height: 100%;
+  @media screen and (max-width: 992px) {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
 `
 export const VideoContainer = styled.ul`
   display: flex;
@@ -25,6 +42,9 @@ export const HomeSideContainer = styled.div`
   overflow-y: scroll;
   width: 90%;
   background-color: ${props => props.bgColor};
+  @media screen and (max-width: 992px) {
+    width: 100%;
+  }
 `
 export const ProductsLoaderContainer = styled.div`
   display: flex;
@@ -86,6 +106,9 @@ export const SearchVideosContainer = styled.div`
   background-color: ${props => props.bgColor};
   overflow-y: scroll;
   padding: 30px;
+  @media screen and (max-width: 992px) {
+    padding: 10px;
+  }
 `
 export const TrendingHeadContainer = styled.div`
   display: flex;
@@ -95,6 +118,10 @@ export const TrendingHeadContainer = styled.div`
   background-color: ${props => props.bgColor};
   color: ${props => props.color}
   width: 100%;
+  @media screen and (max-width: 992px) {
+   margin:0px;
+   height:40px;
+  }
 `
 export const VideosContainer = styled.ul`
   display: flex;
@@ -113,9 +140,16 @@ export const TrendingLogo = styled.div`
   justify-content: center;
   align-items: center;
   margin: 10px;
+  @media screen and (max-width: 992px) {
+    height: 30px;
+    width: 30px;
+  }
 `
 export const TrendingHead = styled.h1`
   color: ${props => props.color};
   font-family: 'Roboto';
   font-weight: bold;
+  @media screen and (max-width: 992px) {
+    font-size: 20px;
+  }
 `

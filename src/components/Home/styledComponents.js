@@ -5,11 +5,20 @@ export const HomeContainer = styled.div`
   height: 98vh;
   padding: 20px;
   background-size: cover;
+  @media screen and (max-width: 992px) {
+    width: 100%;
+    padding: 10px;
+  }
 `
 export const Container = styled.div`
   display: flex;
   justify-content: space-between;
   height: 100%;
+  @media screen and (max-width: 992px) {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
 `
 export const VideoContainer = styled.div`
   display: flex;
@@ -25,6 +34,20 @@ export const PrimeAD = styled.div`
   padding: 50px;
   margin-left: 100px;
   justify-content: space-between;
+  @media screen and (max-width: 992px) {
+    width: 100%;
+    height: 20vh;
+    border-style: solid;
+    border-radius: 10px;
+    border-color: #00000060;
+    border-width: 1px;
+
+    margin: 10px 0px 0px 0px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 `
 export const HomeSideContainer = styled.div`
   background-color: ${props => props.color};
@@ -34,6 +57,9 @@ export const HomeSideContainer = styled.div`
   overflow-y: scroll;
   width: 90%;
   background-color: ${props => props.bgColor};
+  @media screen and (max-width: 992px) {
+    width: 100%;
+  }
 `
 export const ModelContainer = styled.div`
   display: flex;
@@ -41,14 +67,25 @@ export const ModelContainer = styled.div`
   justify-content: flex-start;
   align-items: flex-start;
   margin-top: 50px;
+  @media screen and (max-width: 992px) {
+    margin: 0px;
+    width: 100%;
+  }
 `
 export const BannerLogo = styled.img`
   height: 40px;
+  @media screen and (max-width: 992px) {
+    height: 25px;
+  }
 `
 export const PrimeAdText = styled.p`
   font-size: 15px;
   font-weight: 500;
   display: ${props => props.display};
+  @media screen and (max-width: 992px) {
+    font-size: 12px;
+    margin: 10px 0px;
+  }
 `
 export const GetItNowButton = styled.button`
   background-color: transparent;

@@ -15,6 +15,7 @@ import {
   HomeSideContainer,
   Container,
   VideoDetailsTitle,
+  ReactPlayerContainer,
   ViewsText,
   IconContainer,
   ViewsCount,
@@ -35,6 +36,7 @@ import {
 import Header from '../Header'
 import SideItems from '../SideItems'
 import NxtWatchContext from '../../Context/NxtWatchContext'
+import './index.css'
 
 const apiStatusConstants = {
   initial: 'INITIAL',
@@ -173,12 +175,9 @@ class VideoItemDetails extends Component {
                   bgColor={bgColor}
                   data-testid="videoItemDetails"
                 >
-                  <ReactPlayer
-                    url={videoUrl}
-                    controls
-                    width="90%"
-                    height="500px"
-                  />
+                  <ReactPlayerContainer>
+                    <ReactPlayer url={videoUrl} controls width="100%" />
+                  </ReactPlayerContainer>
                   <VideoDetailsTitle isDark={isDark}>{title}</VideoDetailsTitle>
                   <ViewsDetailsContainer>
                     <ViewsCount>

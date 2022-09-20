@@ -8,11 +8,14 @@ export const VideoCardContainer = styled.li`
   list-style-type: none;
   cursor: pointer;
   margin-left: 25px;
+  @media screen and (max-width: 992px) {
+    margin: 0px;
+  }
 `
 
 export const ThumbnailImage = styled.img`
-  width: 300px;
-  height: 250px;
+  width: 250px;
+  height: 200px;
   object-fit: scale-down;
 `
 export const VideoCardBottomContainer = styled.div`
@@ -36,6 +39,9 @@ export const VideoDetailsText = styled.p`
   font-family: 'Roboto';
   font-size: ${props => props.size}px;
   font-weight: bold;
+  @media screen and (max-width: 992px) {
+    font-size: 15px;
+  }
 `
 export const NavLink = styled(Link)`
   color: ${props => props.textColor};
@@ -47,4 +53,8 @@ export const ViewsAndDate = styled.div`
   justify-content: space-between;
   align-items: center;
   width: 170px;
+  @media screen and (max-width: 992px) {
+    font-size: 12px;
+    margin-top: 10px;
+  }
 `

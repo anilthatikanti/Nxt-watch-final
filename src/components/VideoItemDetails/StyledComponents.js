@@ -12,11 +12,27 @@ export const HomeContainer = styled.div`
   height: 100vh;
   padding: 20px;
   background-size: cover;
+  @media screen and (max-width: 992px) {
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+  }
 `
 export const Container = styled.div`
   display: flex;
   justify-content: space-between;
   height: 100%;
+  @media screen and (max-width: 992px) {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 100%;
+    padding: 0px;
+    margin: 0px;
+  }
 `
 export const HomeSideContainer = styled.div`
   display: flex;
@@ -26,12 +42,23 @@ export const HomeSideContainer = styled.div`
   background-color: ${props => props.bgColor};
   padding: 10px;
   background-color: ${props => (props.isDark ? '#0f0f0f' : '#f9f9f9')};
+  @media screen and (max-width: 992px) {
+    width: 100%;
+  }
+`
+export const ReactPlayerContainer = styled.div`
+  width:100vw;
+  }
 `
 export const VideoDetailsTitle = styled.p`
   font-family: 'Roboto';
   color: ${props => (!props.isDark ? '#181818' : '#ffffff')};
   margin-left: 10px;
   font-weight: bold;
+  @media screen and (max-width: 992px) {
+    font-size: 15px;
+    margin: 10px 0px 10px 0px;
+  }
 `
 export const ViewsDetailsContainer = styled.div`
   display: flex;
@@ -59,6 +86,10 @@ export const ViewsText = styled.p`
   color: ${props => props.color};
   font-family: 'Roboto';
   margin-left: 10px;
+  @media screen and (max-width: 992px) {
+    font-size: 13px;
+    margin: 5px 0px 5px 0px;
+  }
 `
 export const ViewsCount = styled.div`
   display: flex;

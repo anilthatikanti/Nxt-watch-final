@@ -6,12 +6,18 @@ export const VideoCardContainer = styled.li`
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  width: 250px;
+  max-width: 250px;
   list-style-type: none;
   cursor: pointer;
   margin: 25px;
   padding-bottom: 10px;
-  height: 400px;
+  min-height: 400px;
+  @media screen and (max-width: 992px) {
+    width: 100%;
+    max-height: 200px;
+    padding: 0px;
+    margin: 5px;
+  }
 `
 
 export const ThumbnailImage = styled.img`
@@ -24,12 +30,6 @@ export const VideoCardBottomContainer = styled.div`
   width: 100%;
   align-items: center;
 `
-
-export const ProfileImage = styled.img`
-  height: 40px;
-  width: 40px;
-  margin-right: 10px;
-`
 export const VideoDetailsContainer = styled.div`
   display: flex;
   flex-direction: column;
@@ -40,6 +40,9 @@ export const VideoDetailsText = styled.p`
   font-family: 'Roboto';
   font-size: 15px;
   font-weight: bold;
+  @media screen and (max-width: 992px) {
+    padding-top: 10px;
+  }
 `
 
 export const NavLink = styled(Link)`

@@ -12,6 +12,10 @@ export const HeaderContainer = styled.div`
   justify-content: space-between;
   align-items: center;
   width: 100%;
+  @media screen and (max-width: 992px) {
+    max-width: 992px;
+    height: 30px;
+  }
 `
 export const LogoutBox = styled.div`
   background-color: ${props => (props.isDark ? '#181818' : '#f0f0f0')};

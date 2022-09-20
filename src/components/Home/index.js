@@ -60,17 +60,15 @@ class Home extends Component {
           const {isDark} = value
           const bgColor = isDark ? '#181818' : '#f9f9f9'
           return (
-            <div>
-              <HomeContainer isDark={isDark}>
-                <Header />
-                <Container>
-                  <SideItems />
-                  <HomeSideContainer color={bgColor} data-testid="home">
-                    {this.primeAdContainer()}
-                  </HomeSideContainer>
-                </Container>
-              </HomeContainer>
-            </div>
+            <HomeContainer isDark={isDark}>
+              <Header />
+              <Container>
+                <SideItems />
+                <HomeSideContainer color={bgColor} data-testid="home">
+                  {this.primeAdContainer()}
+                </HomeSideContainer>
+              </Container>
+            </HomeContainer>
           )
         }}
       </NxtWatchContext.Consumer>

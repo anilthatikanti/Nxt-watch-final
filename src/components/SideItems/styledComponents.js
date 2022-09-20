@@ -9,6 +9,13 @@ export const SideOptionsVideosContainer = styled.div`
   margin-top: 10px;
   justify-content: space-between;
   background-color: ${props => (props.isDark ? '#181818' : '#ffffff80')};
+  @media screen and (max-width: 992px) {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 5%;
+  }
 `
 export const SideOptions = styled.ul`
   list-style-type: none;
@@ -18,6 +25,13 @@ export const SideOptions = styled.ul`
   height: 20%;
   padding: 0px;
   margin: 0px;
+  @media screen and (max-width: 992px) {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: Center;
+  }
 `
 export const LinkItem = styled(Link)`
   text-decoration: none;
@@ -25,6 +39,9 @@ export const LinkItem = styled(Link)`
   align-items: center;
   width: 150px;
   color: ${props => props.color};
+  @media screen and (max-width: 992px) {
+    width: 100%;
+  }
 `
 export const LinkPara = styled.p`
   font-weight: bold;
@@ -36,6 +53,9 @@ export const SocialMedia = styled.div`
   display: flex;
   flex-direction: column;
   padding: 20px 0px;
+  @media screen and (max-width: 992px) {
+    display: none;
+  }
 `
 export const ContactUs = styled.p`
   font-size: 15px;
